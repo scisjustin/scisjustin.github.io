@@ -110,6 +110,27 @@
       word-break: keep-all;
     }
 
+    .video {
+        background-image: url(../images/video-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 100px 0px 250px 0px;
+        position: relative;
+    }
+
+    .comingway {
+      padding: 1rem 0rem 3rem 0rem;
+      margin-top: 120px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .comingway {
+        padding: 0;
+        margin-top: 25px;
+      }
+    }
+
     </style>
   </head>
 <body oncontextmenu="return false;">
@@ -228,7 +249,7 @@
 
   <script src="../vendor/announce.js" defer></script>
 
-      <!-- ***** Sub Navigation Start ***** -->
+  <!-- ***** Sub Navigation Start ***** -->
   <div class="sub-header">
     <div class="container">
       <div class="row">
@@ -247,7 +268,7 @@
   <!-- ***** Sub Navigation End ***** -->
   
 
-  <div class="page-heading header-text homepage-image" style="background-image: url(../assets/images/transition_background/AASC.png);">
+  <div class="page-heading header-text homepage-image" style="background-image: url(../assets/images/transition_background/AASC.png); padding: 150px 0;">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -286,23 +307,26 @@
     </div> 
   </div>
 
-  <div class="faq-container" style="margin-top: 0; border-top: solid 1px rgb(203, 203, 203);">
+  <div class="faq-container" style="padding-top: 3rem; background: #fafafa">
     <h1 style="padding-bottom: 1rem;">자주 물어보는 질문</h1>
     <div class="faq-item">
         <div class="faq-question">이 학교에는 몇 명의 학생이 있나요?</div>
-        <div class="faq-answer">현재 우리 학교에는 <strong>23명</strong>의 학생이 모든 학년에 걸쳐 재학 중입니다.</div>
+        <div class="faq-answer">수원기독국제학교에는 현재 <strong>26명의 학생</strong>이 모든 학년에 걸쳐 함께 배우고 성장하고 있습니다.<br>소규모 학급 운영을 통해 학생 개개인에게 맞춤형 교육과 세심한 지도를 제공하며, 서로를 존중하고 협력하는 따뜻한 공동체 문화를 자랑합니다.</div>
     </div>
     <div class="faq-item">
         <div class="faq-question">학생들은 대학 및 진로 결정을 어떻게 하나요?</div>
-        <div class="faq-answer">모든 학생들은 중1이 되면 매주 진로 탐구 활동을 통하여 자신의 진로를 주도적으로 연구하기 시작하며, 고1이 되면 국내 또는 해외 2가지의 진로를 나누어 각자의 진로를 준비해 갑니다. </div>
+        <div class="faq-answer">수원기독국제학교에서는 <strong>학생 개개인의 진로 설계</strong>를 매우 중요하게 생각합니다.<br>중학교 1학년부터 매주 진로 탐구 시간을 통해 다양한 직업과 진로를 체험하며, 자신의 흥미와 적성을 깊이 있게 탐구합니다.<br>고등학교에 진학하면 학생들은 국내 대학 진학과 해외 대학 진학, 두 가지 진로 중 하나를 선택하여, 각자의 목표에 맞는 진로 지도를 받습니다.<br>이처럼 학생들은 자신의 꿈을 주도적으로 설계하고, 학교는 그 꿈을 실현할 수 있도록 적극적으로 지원합니다.</div>
     </div>
     <div class="faq-item">
         <div class="faq-question">이 학교에서 학생들은 무엇을 배우나요?</div>
-        <div class="faq-answer">저희는 기독교적 가치를 바탕으로 한 <strong>S.O.T.</strong> 과정을 통해, 수학, 과학, 영어, 사회와 같은 핵심 과목을 배우며, 음악, 예술, 컴퓨터, 일본어 등의 다양한 선택 과목도 제공합니다. 또한 성경 연구, 예배, 토론을 통하여 학생들의 창의력과 비판적 사고력을 개발하며, 무엇보다도 <strong style="text-decoration: underline; font-weight: normal;">삶의 기반이 되는 예수님의 성품을 깊이 배우고 있습니다.</strong> </div>
+        <div class="faq-answer">저희는 기독교적 가치를 바탕으로 한 <strong>S.O.T.</strong> 과정을 통해, 수학, 과학, 영어, 사회와 같은 핵심 과목을 배우며, 음악, 예술, 코딩, 일본어 등의 다양한 선택 과목도 제공합니다. 또한 성경 연구, 예배, 토론을 통하여 학생들의 창의력과 비판적 사고력을 개발하며, 무엇보다도 <strong style="text-decoration: underline; font-weight: normal;">삶의 기반이 되는 예수님의 성품을 깊이 배우고 있습니다.</strong> </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">이 학교에서는 어떤 학습 자료를 사용하나요?</div>
-        <div class="faq-answer">저희는 <strong>School of Tomorrow</strong>의<strong> PACEs</strong>(개별 학습 자료)를 사용하여 학생들에게 체계적이고 효과적인 학습 환경을 제공합니다. 이 과정은 학생들이 자율성과 책임감을 기르도록 설계되었습니다.</div>
+        <div class="faq-answer">
+          저희는 <strong>School of Tomorrow</strong>의 <strong>PACEs</strong>(개별 학습 자료)를 사용하여 학생들에게 체계적이고 효과적인 학습 환경을 제공합니다. 이 과정은 학생들이 자율성과 책임감을 기르도록 설계되었습니다.
+          더 자세한 내용은 <a href="education.html"><strong style="text-decoration: underline">교육과정</strong></a> 탭에서 확인하실 수 있습니다.
+        </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">졸업생의 진로가 어떻게 되나요?</div>
@@ -327,26 +351,81 @@
   </div>
 
 
-  <!-- School Description Start -->
-  <div class="featured section" style="margin-top: 0; border-top: solid 1px rgb(203, 203, 203); padding: 2rem 0rem 4rem 0rem;">
-    <div class="container">
-      <div class="row" style="display: unset;">
-        <h1 style="padding-top: 1rem; text-align: center;">수원기독국제학교</h1>
 
-        <div class="div-school-logo">
-          <img src="../assets/images/logo.png" class="school-logo">
-          <p>SCIS는 Suwon Christian International School (수원기독국제학교)의 약자로, 수원순복음교회에서 설립한 기독교 대안학교입니다. SCIS는 초등학교 1학년부터 고등학교 3학년까지 School of Tomorrow 커리큘럼을 토대로 성경적 세계관에 기반한 교육을 제공합니다. "풀은 마르고 꽃은 시드나 우리 하나님 말씀은 영원히 서리라 하라" 라는 이사야서 40:8의 말씀 처럼 영원한 하나님의 말씀 안에서 이 시대에 진정으로 필요한 글로벌 리더를 양성하기 위하여 2018년 2월1일에 세워졌습니다. </p>
+
+  <div class="video section" style="background-image: url(../assets/blur_principal_darken.png); margin-top: 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Video View</h6>
+            <h2>영상을 통해 학교에 대해 더 알아보세요</h2>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- School Description End -->  
 
+  <div class="video-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="video-frame">
+            <img src="https://i.ytimg.com/vi/Yy69qwensOs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAWKXHv9vspjhhV_JakFFlybiMy7g" alt="">
+            <a href="https://www.youtube.com/watch?v=Yy69qwensOs" target="_blank"><i class="fa fa-play"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="26" data-speed="1000"></h2>
+                   <p class="count-text ">재학 중인<br>학생</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 id="school-years" class="timer count-title count-number" data-to="12" data-speed="1000"></h2>
+                  <p class="count-text ">년 동안<br>이어온 교육</p>
+
+                  <script>
+                    const startYear = 2018;
+                    const currentYear = new Date().getFullYear();
+                    const years = currentYear - startYear + 1;
+                  
+                    // h2 요소 선택
+                    const h2 = document.getElementById('school-years');
+                    // data-to 속성 값 변경
+                    h2.setAttribute('data-to', years);
+                    // (만약 숫자도 바로 보여주고 싶다면)
+                    h2.textContent = years;
+                  </script>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="13" data-speed="1000"></h2>
+                  <p class="count-text ">함께하는<br>선생님</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- School Direction Start -->
-  <div class="featured section" style="margin-top: 0; border-top: solid 1px rgb(203, 203, 203); padding: 1rem 0rem 3rem 0rem;">
+  <div class="featured section comingway" style="background-color: #fafafa; background: linear-gradient(180deg, #ffffff, #d0e8ff9e, #87c9f926, #fdfcf9); border-top: solid 1px rgb(203, 203, 203);">
     <div class="container">
       <div class="row" style="justify-content: center;">
         <div class="col-lg-4 philosophy-responsive">
@@ -376,7 +455,7 @@
   </div>
   <!-- School Direction End -->  
 
-  <div class="featured section" style="margin-top: 0; border-top: solid 1px rgb(203, 203, 203); padding-top: 1rem;">
+  <div class="featured section" style="margin-top: 0; padding-top: 1rem; background: linear-gradient(180deg, rgba(253, 252, 249, 0.6) 0%, rgba(230, 225, 211, 0.25) 30%, rgb(220 215 204 / 51%) 65%, #f5f5f5 85%, #ffffff 100%);">
     <div class="container">
       <div class="row" style="justify-content: center;">
         <div class="col-lg-4 philosophy-responsive">
@@ -532,11 +611,11 @@
 
 
   
-  <div class="featured section" style="margin-top: 0; border-top: solid 1px rgb(203, 203, 203); padding-top: 2rem;">
+  <div class="featured section" style="margin-top: 0; padding-top: 2rem; background: #fafafa;">
     <div class="container">
       <div class="row" style="justify-content: center;">
         <div class="col-lg-4">
-          <h1 style="padding-top: 2rem;" id="Word From Our Founder">인사말</h1>
+          <h1 style="padding-top: 1rem;" id="Word From Our Founder">인사말</h1>
           <span class="breadcrumb" style="padding-bottom: 0.7rem"><a href="index.html">Home</a> > <a href="#Philosophy">Word From Our Founder</a></span>
 
           <div class="left-image">
