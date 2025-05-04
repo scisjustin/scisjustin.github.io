@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 비밀번호 화면 -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-container">
+            <h2>블로그 접속</h2>
+            <p>블로그에 접속하려면 비밀번호를 입력하세요.</p>
+            <input type="password" id="blog-password" placeholder="비밀번호를 입력하세요">
+            <button id="password-submit">접속하기</button>
+        </div>
+    </div>
+
+    <!-- 블로그 콘텐츠 -->
+    <div id="blog-content" style="display: none;">
+        <h1>블로그 포스트</h1>
+        
+        <div class="blog-content-middle">
+            <a href="create.html" class="create-link" style="margin-right: auto;">새 포스트 작성</a>
+            <div>
+                <label for="sort">정렬:</label>
+                <select id="sort">
+                    <option value="recent">최근 만들어짐 순</option>
+                    <option value="oldest">오래전 만들어짐 순</option>
+                </select>
+            </div>
+        </div>
+        <div id="posts">
+            <!-- 포스트 목록이 여기에 동적으로 추가됩니다 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
+    <title>SCIS - 입학절차</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/stylesheet.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+  <style>
+    /*    font-family: 'Poppins', sans-serif     */
+    body, input, p, a, select, h1, h2, h3, h4, h5, h6 {font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+
+    h3{
+      text-align: left;
+      color: white
+    }
+    
+    .breadcrumb {
+      float: left;
+    }
+    
+    .page-heading span {
+      background-color: unset;
+    }
+
+    .steps {
+        justify-content: center;
+        display: flex;
+    }
+
+    .step {
+        width: 50rem;
+        border: solid 1px;
+        border-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 0 2rem 2rem 2rem;
+        margin-right: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .step-title {
+        color: #1e1e1e;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .div-between-steps {
+        height: 1rem;
+    }
+
+    #languageSelect {
+      font-weight: bold;
+      height: 33px;
+    }
+
+    @media (max-width: 1200px) {
+        .step-4, .step-5, .step-6 {
+            height: 38rem;
+        }
+
+        .step-1, .step-2, .step-3 {
+            height: 33rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .steps {
+            display: unset;
+        }
+        
+        .step {
+            display: block;
+            margin: 0 auto;
+            width: unset;
+            height: max-content;
+            margin-bottom: 1rem;
+        }
+
+        .div-between-steps {
+            height: unset;
+        }
+
+        .step-title {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+      #languageSelect {
+        height: 50px;
+        background: transparent;
+        font-weight: bold;
+      }
+
+      .lang {
+        border-top: 1px solid #ddd;
+      }
+
+      #languageSelect {
+        height: 50px;
+        background: transparent;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      word-break: keep-all;
+    }
+
+
+/* Styles specific to the custom form */
+.custom-form {
+  max-width: 800px; /* Wider form on larger screens */
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.custom-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-form p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.custom-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="number"],
+.custom-form textarea,
+.custom-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.custom-form input[type="radio"] {
+  margin-right: 8px;
+}
+
+.custom-form textarea {
+  resize: none;
+}
+
+.custom-form button {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-form button:hover {
+  background-color: #45a049;
+}
+
+.custom-form .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-form .form-group.inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-form footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .custom-form {
+    max-width: unset; /* Wider form for desktops */
+    padding: 30px; /* Add more padding for spaciousness */
+  }
+
+  .custom-form h1 {
+    font-size: 2em; /* Larger heading */
+  }
+
+  .custom-form p {
+    font-size: 16px; /* Slightly larger text for better readability */
+  }
+
+  .custom-form input[type="text"],
+  .custom-form input[type="number"],
+  .custom-form textarea,
+  .custom-form select {
+    padding: 15px; /* Increase padding for larger inputs */
+    font-size: 18px; /* Slightly larger text */
+  }
+
+  .custom-form button {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+/* For smaller screens (e.g., tablets and mobile phones) */
+@media (max-width: 768px) {
+  .custom-form {
+    max-width: 95%; /* Take almost full width on small devices */
+    margin: 20px auto; /* Reduce top/bottom margin */
+    padding: 15px; /* Compact padding */
+  }
+
+  .custom-form h1 {
+    font-size: 1.5em; /* Slightly smaller heading */
+  }
+
+  .custom-form input[type="text"],
+  .custom-form input[type="number"],
+  .custom-form textarea,
+  .custom-form select {
+    font-size: 14px; /* Reduce input size for smaller screens */
+    padding: 8px;
+  }
+
+  .custom-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+  </style>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+
+                      <div style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 style="font-family: 'Poppins', sans-serif">SCIS</h1>
+                        <div style="border-right: solid 1px gray; height: 3rem; margin-left: 0.5rem; margin-right: 0.5rem;"></div>
+                        <p style="line-height: 13px; text-align: left; width: 150px; font-family: 'Poppins', sans-serif">Suwon Christian<br>International School</p>
+                      </div>
+
+
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">학교 소개</a></li>
+                      <li><a href="education.html">교육과정</a></li>
+                      <li><a href="admission.html" class="active">입학절차</a></li>
+                      <li><a href="community.html">커뮤니티</a></li>
+
+                      <div class="lang">
+                        <select id="languageSelect" style="margin-top: 0.2rem; border: unset;" onchange="if(this.value) location.href=(this.value);">
+                          <option value="/admission.html">한국어</option>
+                          <option value="../en/admission.html">English</option>
+                        </select>
+                      </div>
+
+                      <li></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div class="page-heading header-text" style="background-image: url(../assets/images/admission/high_schoolers.png); background-position: center; object-fit: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 style="font-family: 'Poppins', sans-serif">Admission</h3>
+          <span class="breadcrumb"><a href="index.html">Home</a> > <a href="#">Admission</a></span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+  <div class="container">
+    <h1 id="admission-process" style="padding: 2rem 0 2rem 0;">입학 절차</h1>
+    <div style="margin-bottom: 1rem; border: solid 1px #ababab;"></div>
+
+    <div class="steps">
+        <div class="step step-1">
+            <h3 class="step-title">1. 학교 방문</h3>
+            <p style="text-align: center;">이제 영어권 국가의 4학년 이상 학생이나 한국의 SOT 학교 편입생 및 모든 저학년 학생을 대상으로 지원을 받고 있습니다. 전화나 이메일로 담당자와 통화 후 학교 방문 일정을 잡으시기 바랍니다.
+                <br>전화: 031-548-2198 <br>휴대전화: 010-8875-0479 <br>이메일: scis@outlook.kr</p>
+        </div>
+
+        <div class="step step-2">
+            <h3 class="step-title">2. 입학원서접수</h3>
+            <p style="text-align: center;">예약 당일에, 학교를 방문하시고 담당자와 상담 후, 입학원서를 교부 받으시고, 진단테스트 일정을 확인합니다.</p>
+        </div>
+
+        <div class="step step-3">
+            <h3 class="step-title">3. 진단테스트</h3>
+            <p style="text-align: center;">시험 전날 까지 테스트 비용을 입금하시고, 준비하신 입학원서와 서류를 제출합니다.
+              진단테스트는 English, Word Building, Reading, Math
+              총 4과목을 S.O.T.에서 제공되는 온라인 Diagnostic Test를 통하여 치르게 됩니다.
+              시험에는 2-3시간 정도가 소요되므로 시간에 여유를 가지고 참여를 부탁드립니다.</p>
+        </div>
+    </div>
+
+    <div class="div-between-steps"></div>
+
+    <div class="steps">
+        <div class="step step-4">
+            <h3 class="step-title">4. 학부모 면담</h3>
+            <p style="text-align: center;">제출해 주신 서류와 진단테스트 결과를 종합적으로 심사하여,
+              합격 예정자들에게는 면담 일정을 공지해 드립니다.
+              S.O.T.규정에 따라 학부모와 학생 개별 면담을 진행합니다.
+              면접 당일에는 반드시 부모님께서 함께 참석을 해셔야 하며,
+              혹시라도 한 쪽이 불참일 경우에는 SCIS규정에 따른 위임장을 제출해 주시기 바랍니다.
+              </p>
+        </div>
+
+        <div class="step step-5">
+            <h3 class="step-title">5. 학생면담</h3>
+            <p style="text-align: center;">학부모 면담을 마친 후, 학생들과의 최종적인 개인면담을 통하여
+              SCIS에 입학하고자 하는 본인의 의지를 확인합니다.
+              아무리 진단테스트 결과가 우수하다 하더라도,
+              본인의 의지가 불명확할 경우, 입학은 허가되지 않습니다.</p>
+        </div>
+
+        <div class="step step-6">
+            <h3 class="step-title">6. 최종합격</h3>
+            <p style="text-align: center;">SCIS의 모든 선생님들의 신중한 심의 후에,
+              위의 모든 절차를 합격한 학생과 학부모님들께는
+              이메일 또는 카카오톡을 통하여 합격통보가 우송됩니다.
+              합격통지서에 기입된 입학절차 마감일까지 모든 절차를 신속하게 따라 주시기 바랍니다.
+              마감일 밤12시까지 입학 절차가 완결되지 않을 경우, 합격이 최소되는 경우가 발생할 수 있습니다.
+              
+              </p>
+        </div>
+    </div>
+
+    <div class="custom-form">
+      <h1>문의 양식</h1>
+      <p>아래 양식을 기입하신 후, 제출을 클릭해 주시면 담당자가 확인하고 연락을 드립니다.</p>
+      
+      <!-- Form starts here -->
+      <form id="form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>성별:</label>
+            <div class="form-group inline">
+                <input type="radio" id="male" name="gender" value="남성" required>
+                <label for="male">남성</label>
+                <input type="radio" id="female" name="gender" value="여성" required>
+                <label for="female">여성</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="admission-date">입학을 원하는 시기:</label>
+            <input type="text" id="admission-date" name="admission_date" placeholder="예: 2024년 3월" required>
+        </div>
+        <div class="form-group">
+            <label for="current-school">현재 다니는 학교:</label>
+            <input type="text" id="current-school" name="current_school" required>
+        </div>
+        <div class="form-group">
+            <label for="english-level">영어 이해도:</label>
+            <select id="english-level" name="english_level">
+                <option value="상">상</option>
+                <option value="중">중</option>
+                <option value="하">하</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="questions">기타 질문:</label>
+            <textarea id="questions" name="questions" rows="4" placeholder="여기에 질문을 입력하세요"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="contact-preference">연락 받기를 원하는 방법을 기입 (이메일 또는 전화):</label>
+            <input type="text" id="contact-preference" name="contact_preference" placeholder="예: scis@outlook.kr 혹은 031-548-2198" required>
+        </div>
+        <button id="submit-button" type="submit" class="submit">
+            제출
+            <div id="spinner" class="spinner"></div>
+        </button>
+    </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p style="padding: 1rem 0 1rem 0;">Suwon Christian International School</p>
+        <p>TEL : 031-548-2198<br>E-mail: scis@outlook.kr</p>
+        <p style="padding: 1rem 0 1rem 0;"><a href="https://bit.ly/inoahbabo" target="_blank">Designed</a> and developed with faith by<br><a href="https://www.instagram.com/yg201009/" target="_blank">Justin Kang</a> & <a rel="nofollow" href="https://www.instagram.com/leeyena120" target="_blank">Laura Lee</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js/isotope.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/counter.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../vendor\remove_F12.js"></script>
+  
+  <script src="../vendor/systemPrompt.js"></script>
+  <script src="../vendor/chat.js"></script>
+
+  <script>
+async function handleSubmit(event) {
+    event.preventDefault(); // 폼 기본 제출 동작 방지
+
+    const form = document.getElementById("form");
+    const formData = new FormData(form);
+    const submitButton = document.getElementById("submit-button");
+    const spinner = document.getElementById("spinner");
+
+    // FormData 객체를 JSON으로 변환
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // 버튼 비활성화 및 스피너 표시
+    submitButton.disabled = true;
+    spinner.style.display = "inline-block";
+
+    try {
+        const response = await fetch("https://scisjustin.pythonanywhere.com/submit_form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            alert(result.message || "Form submitted successfully!");
+        } else {
+            const error = await response.json();
+            alert(error.message || "Failed to submit the form. Please try again.");
+        }
+    } catch (err) {
+        alert("An error occurred: " + err.message);
+    } finally {
+        // 버튼 활성화 및 스피너 숨기기
+        spinner.style.display = "none";
+        submitButton.disabled = false;
+    }
+}
+  </script>
+
+<script src="../vendor/hide_preloader.js"></script>
+</html>
